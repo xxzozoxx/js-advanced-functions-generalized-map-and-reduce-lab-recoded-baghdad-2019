@@ -9,9 +9,9 @@ function map (sourceArray , callingback){
   return newArr;
 }
 function reduce(sourceArray,point,callingback){
-  let givenArr = [];
+  let result;
   for (let i = 0; i < sourceArray.length; i++) {
-    callingback(sourceArray[i],point);
+    result = callingback(sourceArray[i],point);
   }
-
+return result
 }
