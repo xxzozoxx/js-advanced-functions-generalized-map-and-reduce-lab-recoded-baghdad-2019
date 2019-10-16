@@ -19,7 +19,7 @@ function reduce(sourceArray,callingback,point){
   }
   let i = (!!point) ? 0 : 1
   for (; i < sourceArray.length; i++) {
-    result = callingback(sourceArray[i],point);
+    result = callingback(sourceArray[i],result);
   }
 return result
 }
