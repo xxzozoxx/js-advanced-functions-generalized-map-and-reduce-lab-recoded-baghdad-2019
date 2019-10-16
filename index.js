@@ -10,7 +10,15 @@ function map (sourceArray , callingback){
 }
 function reduce(sourceArray,point,callingback){
   let result;
-  for (let i = 0; i < sourceArray.length; i++) {
+  if(!!starting){
+    result = starting
+  } 
+  else{
+   
+     result = src[0]
+  }
+  let i = (!!starting) ? 0 : 1
+  for (; i < sourceArray.length; i++) {
     result = callingback(sourceArray[i],point);
   }
 return result
